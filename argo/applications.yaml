@@ -1,0 +1,35 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: soapin-suds
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: soapinsuds
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: src/main/argo
+    repoURL: 'git@github.com:jaybyrrd/SoapinSuds.git'
+    targetRevision: HEAD
+  sources: [ ]
+  project: default
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: soapin-suds-postgres
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: soapinsuds
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: bitnami/postgresql
+    repoURL: 'https://github.com/bitnami/charts.git '
+    targetRevision: HEAD
+  sources: [ ]
+  project: default
+  syncPolicy:
+    automated: null
