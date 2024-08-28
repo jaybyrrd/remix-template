@@ -46,15 +46,15 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: jaybyrrd/soapinsuds
-      # - name: Login to ECR Registry
-      #   uses: docker/login-action@v3
-      #   with:
-      #     registry: 554509907436.dkr.ecr.us-east-1.amazonaws.com
+      - name: Login to ECR Registry
+        uses: docker/login-action@v3
+        with:
+          registry: 554509907436.dkr.ecr.us-east-1.amazonaws.com
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: Dockerfile.jvm
+          file: Dockerfile
           push: false
           tags: ${{ steps.login-ecr.outputs.registry }}/remix-app:${{steps.pr-version.outputs.version_tag}}
           labels: ${{ steps.meta.outputs.labels }}
