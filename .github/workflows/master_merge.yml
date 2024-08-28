@@ -45,7 +45,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: jaybyrrd/soapinsuds
+          images: jaybyrrd/remix-template
       - name: Login to ECR Registry
         uses: docker/login-action@v3
         with:
