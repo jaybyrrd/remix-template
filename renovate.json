@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", "group:all", "schedule:daily"],
+  "dependencyDashboard": true,
+  "repositories": ["jaybyrrd/remix-template"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/"
+    }
+  ],
+  "branchPrefix": "renovate-",
+  "customManagers": []
+}
