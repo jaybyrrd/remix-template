@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: remix-app
-  namespace: istio-system
+  namespace: istio-ingress
 spec:
   hosts:
     - "remixer.chirpsoftware.net"
