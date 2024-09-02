@@ -25,7 +25,7 @@ spec:
         version: 1.0.0
     spec:
       containers:
-        - image: 554509907436.dkr.ecr.us-east-1.amazonaws.com/remix-app:v0.0.9-remix-app
+        - image: 554509907436.dkr.ecr.us-east-1.amazonaws.com/remix-app:v0.0.11-remix-app
           imagePullPolicy: Always
           name: {{ .Values.name }}
           ports:

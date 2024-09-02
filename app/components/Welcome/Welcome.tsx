@@ -16,7 +16,7 @@ export function Welcome() {
         </Text>
       </Title>
       <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Remix project includes a minimal setup for server side
+        [Change] This starter Remix project includes a minimal setup for server side
         rendering, if you want to learn more on Mantine + Remix integration
         follow{" "}
         <Anchor href="https://mantine.dev/guides/remix/" size="lg">
